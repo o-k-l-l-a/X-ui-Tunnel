@@ -12,7 +12,7 @@ read -p "Please enter the domain name to replace 'dowmin.ir' in haproxy.cfg: " D
 
 # Download and replace the haproxy.cfg file
 sudo rm -f /etc/haproxy/haproxy.cfg
-sudo wget -O /etc/haproxy/haproxy.cfg https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/haproxy.cfg
+sudo wget -O /etc/haproxy/haproxy.cfg https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/Tunnel/haproxy.cfg
 
 # Replace 'dowmin.ir' with the user-provided domain name in haproxy.cfg
 sudo sed -i "s/dowmin.ir/$DOMAIN_NAME/g" /etc/haproxy/haproxy.cfg
