@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt update -y
 # Prompt user for location choice
 read -p "Please choose your location (iran/uk): " location
 
