@@ -7,7 +7,7 @@ Sure, here is the revised text with emojis:
 1. **First**, run the script on a server outside of Iran. This script also has the capability to install WARP and by default selects Direct connection. To install, run the following command in the terminal of the server outside Iran:
 
     ```bash
-    curl -O https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/setup.sh bash setup.sh
+    curl -O https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/setup.sh &&  bash setup.sh
     ```
 
 
