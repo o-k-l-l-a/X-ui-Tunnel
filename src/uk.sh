@@ -92,7 +92,7 @@ choice=${choice:-direct}
 # Download and replace the x-ui database based on user's choice
 rm -f /etc/x-ui/x-ui.db
 if [[ "$choice" == "warp" ]]; then
-    wget -O /etc/x-ui/x-ui.db https://github.com/o-k-l-l-a/X-ui-Tunnel/raw/main/x-ui/db/warp.db
+    wget -O /etc/x-ui/x-ui.db https://github.com/o-k-l-l-a/X-ui-Tunnel/raw/main/x-ui/db/warp.db && systemctl restart x-ui
     # Run setup_warproxy.sh script in the background
     nohup curl -0 https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/warp/setup_warproxy.sh | bash &
 else
