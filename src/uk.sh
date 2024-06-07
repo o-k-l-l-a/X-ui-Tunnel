@@ -113,9 +113,9 @@ rm -f /etc/x-ui/x-ui.db >/dev/null 2>&1
 if [[ "$choice" == "warp" ]]; then
     echo "Configuring x-ui database for WARP..."
     wget -q -O /etc/x-ui/x-ui.db https://github.com/o-k-l-l-a/X-ui-Tunnel/raw/main/x-ui/db/warp.db && systemctl restart x-ui >/dev/null 2>&1
-    # Run setup_warproxy.sh script in the background
-    echo "Running WARP setup script..."
-    nohup curl -s https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/warp/setup_warproxy.sh | bash  >/dev/null 2>&1
+    # Run setup_warproxy.sh script in the background without showing any output
+    nohup curl -s https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/warp/setup_warproxy.sh | bash >/dev/null 2>&1 &
+    echo ""
 else
     echo "Configuring x-ui database for Direct..."
     wget -q -O /etc/x-ui/x-ui.db https://github.com/o-k-l-l-a/X-ui-Tunnel/raw/main/x-ui/db/direct.db >/dev/null 2>&1
