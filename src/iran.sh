@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Check the number of arguments
+if [ "$#" -ne 1 ]; then
+    # If no argument is given, prompt the user to enter the domain name
+    read -p "Please enter the domain name to replace 'dowmin.ir' in haproxy.cfg: " DOMAIN_NAME
+else
+    # If an argument is given, use it as the domain name
+    DOMAIN_NAME=$1
+fi
+
 # Add PPA repository for HAProxy 2.9
 sudo add-apt-repository ppa:vbernat/haproxy-2.9 -y
 
@@ -7,14 +16,11 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.9 -y
 sudo apt update
 sudo apt install haproxy=2.9.\* -y
 
-# Prompt user for domain name
-read -p "Please enter the domain name to replace 'dowmin.ir' in haproxy.cfg: " DOMAIN_NAME
-
 # Download and replace the haproxy.cfg file
 sudo rm -f /etc/haproxy/haproxy.cfg
 sudo wget -O /etc/haproxy/haproxy.cfg https://raw.githubusercontent.com/o-k-l-l-a/X-ui-Tunnel/main/Tunnel/haproxy.cfg
 
-# Replace 'dowmin.ir' with the user-provided domain name in haproxy.cfg
+# Replace 'dowmin.ir' with the provided domain name in haproxy.cfg
 sudo sed -i "s/dowmin.ir/$DOMAIN_NAME/g" /etc/haproxy/haproxy.cfg
 
 # Restart HAProxy service
