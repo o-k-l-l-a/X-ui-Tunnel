@@ -17,7 +17,8 @@ Sure, here is the revised text with emojis:
 
 4. **During the installation**, apply these settings to easily and quickly connect to the internet and bypass the existing restrictions.
 
-![image](https://github.com/o-k-l-l-a/X-ui-Tunnel/assets/89906412/820e6b81-2895-468c-baa3-5b7ef9466531)
+![image](https://github.com/o-k-l-l-a/X-ui-Tunnel/assets/89906412/d0dbff02-05d9-4b21-8711-3231671f2ef7)
+
 
 ✨ By following these simple steps, you can easily bypass the filtering and enjoy faster internet access. 🚀
 
