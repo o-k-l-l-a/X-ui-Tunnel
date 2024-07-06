@@ -1,6 +1,4 @@
-Sure, here is the revised text with emojis:
 
----
 
 🌐 Given the filtering in Iran, you can use this script to bypass the restrictions and achieve faster internet access. To do this, follow these steps:
 
